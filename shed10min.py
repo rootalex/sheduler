@@ -1,9 +1,10 @@
 from apscheduler.schedulers.blocking import BlockingScheduler
 import urllib.request
+import datetime
 
 sched = BlockingScheduler()
 
-@sched.scheduled_job('interval', minutes=10)
+@sched.scheduled_job('interval', minutes=3)
 def timed_job():
     # print('This job is run every three minutes.')
     webUrl = urllib.request.urlopen('https://etcet-test.herokuapp.com/done_to_todo')
