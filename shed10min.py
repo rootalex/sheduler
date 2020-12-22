@@ -3,7 +3,7 @@ import urllib.request
 
 sched = BlockingScheduler()
 
-@sched.scheduled_job('interval', minutes=1)
+@sched.scheduled_job('interval', minutes=10)
 def timed_job():
     # print('This job is run every three minutes.')
     webUrl = urllib.request.urlopen('https://etcet-test.herokuapp.com/done_to_todo')
