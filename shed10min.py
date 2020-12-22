@@ -9,7 +9,7 @@ def timed_job():
     # print('This job is run every three minutes.')
     webUrl = urllib.request.urlopen('https://etcet-test.herokuapp.com/done_to_todo')
     # print("result code: " + str(webUrl.getcode()))
-    print(webUrl.read() , datetime.datetime.now().date())
+    print(webUrl.read() , datetime.datetime.now())
 
 
 '''
